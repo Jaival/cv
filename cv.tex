@@ -30,7 +30,7 @@
 \newcommand{\eduheader}[4]{% degree, institution, location, dates/info
   {\small\noindent\begin{tabularx}{\textwidth}{L R}
     \textbf{#1} — #2 & \textcolor{lightgray}{#3 • #4}\\
-  \end{tabularx}}\\[-2pt]}
+  \end{tabularx}}\par\vspace{-2pt}}
 % Tight list environment that cancels paragraph spacing from parskip
 \newenvironment{tightitemize}{\vspace*{-\parskip}\begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt]\RaggedRight}{\end{itemize}}
 
@@ -46,8 +46,8 @@
 \definecolor{lightgray}{HTML}{666666}
 
 % ---------- SECTION FORMATTING ----------
-\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\vspace{0.15\baselineskip}{\color{primary}\titlerule}]
-\titlespacing*{\section}{0pt}{0.5\baselineskip}{0.3\baselineskip}
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\vspace{0.1\baselineskip}{\color{primary}\titlerule}]
+\titlespacing*{\section}{0pt}{0.4\baselineskip}{0.2\baselineskip}
 
 % ---------- LISTS ----------
 \setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
@@ -64,8 +64,8 @@
 \begin{center}
 \begin{minipage}{0.92\textwidth}
 \centering
-    {\Huge\bfseries Jaival Saija}\\[1pt]
-    {\large DevOps Engineer}\\[3pt]
+    {\Huge\bfseries Jaival Saija}\\[0.5pt]
+    {\large DevOps Engineer}\\[2pt]
     {\small
     \href{mailto:saijajaival@gmail.com}{saijajaival@gmail.com} \quad | \quad
     \href{https://jaivalsaija.vercel.app}{jaivalsaija.vercel.app} \quad | \quad
@@ -81,40 +81,40 @@
 
 % ======= PROFESSIONAL SUMMARY =======
 \section*{Professional Summary}
-{\normalsize\textbf{DevOps Engineer} with 10 months of hands-on experience supporting AWS-based production systems for a \dotnet{} CMS product; currently pursuing an M.\,Sc.\ in Computer Science. Skilled in \textbf{monitoring}, \textbf{configuration management}, \textbf{troubleshooting}, and \textbf{release support} in cross-functional teams. Strong foundation in \textbf{cloud}, \textbf{networking}, and \textbf{security} via coursework and certifications. Motivated to improve reliability, automate routine work, and ship faster with safe processes.}
+{\normalsize Early-career \textbf{DevOps Engineer} with practical hands\textendash{}on experience supporting AWS-hosted systems; currently pursuing an M.\,Sc.\ in Computer Science. Skilled in \textbf{monitoring}, \textbf{configuration management}, \textbf{troubleshooting}, and \textbf{release support} in cross-functional teams. Strong foundation in \textbf{AWS} (EC2, S3, IAM, VPC), \textbf{CI/CD} (GitHub Actions) \textbf{networking}, and \textbf{monitoring} (dashboards, alerts). Focused on reliability, automation, and ship faster with safe processes.}
 
 % ======= SKILLS =======
 \section*{Skills}
-{\small
+{\footnotesize
 \begin{itemize}
-    \item \textbf{Cloud} — Amazon Web Services (EC2, S3, IAM, VPC), Google Cloud, Firebase
-    \item \textbf{DevOps} — Git/GitHub, CI/CD basics, monitoring, incident triage, runbooks
-    \item \textbf{Programming} — Python, JavaScript, TypeScript, Next.js, Flutter
+    \item \textbf{Cloud} — Amazon Web Services (EC2, S3, IAM, VPC); Google Cloud; Firebase
+    \item \textbf{DevOps} — Git/GitHub, GitHub Actions (CI/CD), monitoring/alerting, incident response, runbooks, basic IaC (Ter\-raform/CloudFormation exposure)
+    \item \textbf{Programming} — Python, Bash, JavaScript/TypeScript; Next.js; Flutter
     \item \textbf{Databases} — PostgreSQL, MySQL, Firestore
-    \item \textbf{Networking \& Security} — CCNA R\&S, secure systems basics
+    \item \textbf{Platforms} — Linux fundamentals; Docker (basics); networking/security foundations (CCNA R\&S)
 \end{itemize}}
 
 % Optional ATS keyword line to improve matching
-{\footnotesize\textit{Keywords: AWS, Cloud, DevOps, CI/CD, Linux, Networking, Security, Monitoring, Scripting, Python, JavaScript, TypeScript, PostgreSQL, MySQL, Firebase}}
+{\footnotesize\textit{Keywords: AWS, EC2, S3, IAM, VPC, DevOps, CI/CD, GitHub Actions, Docker, Terraform, CloudFormation, CloudWatch, Linux, Bash, Python, Monitoring, Incident Response, Postmortem, PostgreSQL, MySQL, Firebase}}
 
 % ======= EXPERIENCE =======
 \section*{Experience}
 
 \xpheader{\textbf{Junior DevOps Engineer}}{Maven\- Infosoft\- Pvt.\- Ltd.}{Ahmedabad, India}{\textbf{Jun 2021} \textendash{} \textbf{Mar 2022}}{\textbf{10 months}}
 \begin{tightitemize}
-    \item Supported AWS-hosted infrastructure for a \dotnet{} CMS across multiple environments.
-    \item Monitored servers, triaged incidents, and resolved 50+ tickets in under 6 months.
+    \item Supported AWS-hosted infrastructure for a \dotnet{} CMS across multiple environments (dev\,/\,stage\,/\,prod);
+    \item Monitored servers, triaged incidents, and resolved \textbf{50+} tickets in \textbf{under 6 months}; partnered with developers for root cause fixes and postmortems.
     \item Reduced maintenance time by 20\% by streamlining standard operating procedures.
     \item Authored deployment runbooks, cutting onboarding time by 30\%.
 \end{tightitemize}
-\medskip
+\vspace{2pt}
 
 \xpheader{\textbf{Junior Developer (Internship)}}{Apexa\- Information\- System\- Pvt.\- Ltd.}{Ahmedabad, India}{\textbf{Jan 2020} \textendash{} \textbf{Jun 2020}}{\textbf{6 months}}
 \begin{tightitemize}
     \item Built a cross-platform task management app in Flutter with a Firebase backend.
     \item Designed data models, implemented real-time sync, and deployed to Firebase Hosting.
 \end{tightitemize}
-\medskip
+\vspace{2pt}
 
 \xpheader{\textbf{Junior Developer (In-house Internship)}}{Ganpat University}{Ahmedabad, India}{\textbf{May 2019} \textendash{} \textbf{Jun 2019}}{\textbf{2 months}}
 \begin{tightitemize}
@@ -153,5 +153,3 @@
 \end{multicols}
 
 \end{document}
-
-

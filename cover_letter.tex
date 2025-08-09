@@ -2,62 +2,66 @@
 \documentclass[11pt,a4paper]{article}
 
 % ---------- PACKAGES ----------
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[a4paper,margin=1.5cm]{geometry}
 \usepackage{parskip}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{fontawesome5}
 \usepackage{hyperref}
 \usepackage{bookmark}
 \usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{fontspec}
-\usepackage[final]{microtype}
-
-% ---------- MACROS ----------
+\usepackage{ragged2e}
 \newcommand{\dotnet}{\mbox{.NET}}
-
 % ---------- FONTS ----------
-\setmainfont{Roboto}
+% Use a system sans font with full bold/italic shapes
+\setmainfont{Arial}
+\setsansfont{Arial}
+\renewcommand{\familydefault}{\sfdefault}
 
 % ---------- COLORS ----------
 \definecolor{primary}{HTML}{0A66C2}
+\definecolor{textgray}{HTML}{333333}
 \definecolor{lightgray}{HTML}{666666}
 
 % ---------- SECTION FORMATTING ----------
-\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
-
-% ---------- HEADER ----------
-\newcommand{\cvheader}{%
-    {\Huge \textbf{Jaival Saija}} \\[2pt]
-    {\small \textcolor{lightgray}{DevOps Engineer}} \\[6pt]
-    {\small
-    \faIcon{map-marker-alt} Kaiserslautern, Germany \quad
-    \faIcon{envelope} \href{mailto:saijajaival@gmail.com}{saijajaival@gmail.com} \quad
-    \faIcon{globe} \href{https://jaivalsaija.vercel.app}{jaivalsaija.vercel.app} \quad
-    \faIcon[brands]{linkedin} \href{https://linkedin.com/in/jaivalsaija}{linkedin.com/in/jaivalsaija} \quad
-    \faIcon[brands]{github} \href{https://github.com/Jaival}{github.com/Jaival}%
-    }
-}
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\vspace{0.1\baselineskip}{\color{primary}\titlerule}]
 
 % ---------- DOCUMENT ----------
 \begin{document}
 \frenchspacing
 \hypersetup{hidelinks,breaklinks=true,pdfauthor={Jaival Saija},pdftitle={Cover Letter},pdfcreator={XeLaTeX}}
-\setlength{\emergencystretch}{2em}
+\setlength{\emergencystretch}{6em}
 \sloppy
 
-\cvheader%
-\vspace{0.5cm}
+% ======= HEADER =======
+\begin{center}
+\begin{minipage}{0.92\textwidth}
+\centering
+    {\Huge\bfseries Jaival Saija}\\[0.5pt]
+    {\large DevOps Engineer}\\[2pt]
+    {\small
+    \href{mailto:saijajaival@gmail.com}{saijajaival@gmail.com} \quad | \quad
+    \href{https://jaivalsaija.vercel.app}{jaivalsaija.vercel.app} \quad | \quad
+    \href{https://linkedin.com/in/jaivalsaija}{LinkedIn} \quad | \quad
+    \href{https://github.com/Jaival}{GitHub} \quad | \quad
+    \textcolor{lightgray}{Location: Kaiserslautern, Germany} \quad | \quad
+    \textcolor{lightgray}{Contact Number: +49 1745126677}
+    }
+\end{minipage}
+\end{center}
 
+\vspace{4pt}
+
+% ======= COVER LETTER =======
 \section*{Cover Letter}
 
 \textbf{Dear Hiring Manager,}
 
-I am excited to apply for the DevOps Engineer position at [Company]. With hands-on experience supporting AWS-based production systems for a \dotnet{} CMS product and current graduate studies in Computer Science at RPTU, I bring a pragmatic approach to reliability, automation, and collaborative delivery.
+I am excited to apply for the DevOps Engineer position at [Company]. With hands-on experience supporting AWS-based production systems for a {\dotnet} CMS product and current graduate studies in Computer Science at RPTU, I bring a pragmatic approach to reliability, automation, and collaborative delivery.
 
 \textbf{What I can bring to your team:}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}[leftmargin=*, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt]
     \item \textbf{Production-minded AWS support:} Monitored servers, performed upgrades/patching, and partnered with developers to resolve incidents and ship releases across multiple environments.
     \item \textbf{Faster, safer releases:} Streamlined deployment steps and authored runbooks/SOPs that reduced manual effort by 20\% and cut onboarding time by 30\%.
     \item \textbf{Clear communication:} Translated operational issues into clear action items, improving ticket turnaround times and cross-team alignment.
