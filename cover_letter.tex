@@ -1,0 +1,77 @@
+% !TEX TS-program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+% ---------- PACKAGES ----------
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage[final]{microtype}
+
+% ---------- MACROS ----------
+\newcommand{\dotnet}{\mbox{.NET}}
+
+% ---------- FONTS ----------
+\setmainfont{Roboto}
+
+% ---------- COLORS ----------
+\definecolor{primary}{HTML}{0A66C2}
+\definecolor{lightgray}{HTML}{666666}
+
+% ---------- SECTION FORMATTING ----------
+\titleformat{\section}{\large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+
+% ---------- HEADER ----------
+\newcommand{\cvheader}{%
+    {\Huge \textbf{Jaival Saija}} \\[2pt]
+    {\small \textcolor{lightgray}{DevOps Engineer}} \\[6pt]
+    {\small
+    \faIcon{map-marker-alt} Kaiserslautern, Germany \quad
+    \faIcon{envelope} \href{mailto:saijajaival@gmail.com}{saijajaival@gmail.com} \quad
+    \faIcon{globe} \href{https://jaivalsaija.vercel.app}{jaivalsaija.vercel.app} \quad
+    \faIcon[brands]{linkedin} \href{https://linkedin.com/in/jaivalsaija}{linkedin.com/in/jaivalsaija} \quad
+    \faIcon[brands]{github} \href{https://github.com/Jaival}{github.com/Jaival}%
+    }
+}
+
+% ---------- DOCUMENT ----------
+\begin{document}
+\frenchspacing
+\hypersetup{hidelinks,breaklinks=true,pdfauthor={Jaival Saija},pdftitle={Cover Letter},pdfcreator={XeLaTeX}}
+\setlength{\emergencystretch}{2em}
+\sloppy
+
+\cvheader%
+\vspace{0.5cm}
+
+\section*{Cover Letter}
+
+\textbf{Dear Hiring Manager,}
+
+I am excited to apply for the DevOps Engineer position at [Company]. With hands-on experience supporting AWS-based production systems for a \dotnet{} CMS product and current graduate studies in Computer Science at RPTU, I bring a pragmatic approach to reliability, automation, and collaborative delivery.
+
+\textbf{What I can bring to your team:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Production-minded AWS support:} Monitored servers, performed upgrades/patching, and partnered with developers to resolve incidents and ship releases across multiple environments.
+    \item \textbf{Faster, safer releases:} Streamlined deployment steps and authored runbooks/SOPs that reduced manual effort by 20\% and cut onboarding time by 30\%.
+    \item \textbf{Clear communication:} Translated operational issues into clear action items, improving ticket turnaround times and cross-team alignment.
+\end{itemize}
+
+I took time away from full-time work to pursue my M.Sc., deepening my foundation in operating systems, networks, cloud computing, and machine learning. This period sharpened my ability to reason about performance, security, and scalability—skills I am eager to apply to real-world systems at [Company].
+
+I'm motivated by environments where uptime, feedback loops, and continuous improvement matter. I would welcome the opportunity to discuss how my background in AWS support, release coordination, and systematic problem-solving can help [Company] enhance reliability and ship faster with confidence.
+
+Thank you for your time and consideration. I look forward to speaking with you.
+
+\textbf{Sincerely,} \\
+Jaival Saija
+
+\end{document}
+
+
