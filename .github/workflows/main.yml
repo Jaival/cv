@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set current date as environment variable
-        run: echo "TAG_DATE=$('%d-%m-%Y')" >> $GITHUB_ENV
+      # - name: Set current date as environment variable
+      #   run: echo "TAG_DATE=$('%d-%m-%Y')" >> $GITHUB_ENV
       # - name: Tag the repository
       #   id: tag
       #   run: |
@@ -26,10 +26,10 @@ jobs:
           file: cv.tex
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: github.ref_type == 'tag'
         with:
           make_latest: true
           files: cv.pdf
-          tag_name: ${{ env.TAG_DATE }}
       # - uses: actions/upload-artifact@v4
       #   with:
       #     name: pdf
