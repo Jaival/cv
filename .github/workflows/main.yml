@@ -1,15 +1,23 @@
 name: Build CV
-on: [push]
+on:
+  push: 
+    branches: main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: voioo/xelatex-action@v1.0.1
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Generate PDF
+        uses: voioo/xelatex-action@v1.0.1
         with:
           file: cv.tex
-      - uses: actions/upload-artifact@v4
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: pdf
-          path: ./pdf/Jaival_Saija_CV.pdf
+          files: cv.pdf
+      # - uses: actions/upload-artifact@v4
+      #   with:
+      #     name: pdf
+      #     path: ./pdf/Jaival_Saija_CV.pdf
