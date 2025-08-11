@@ -24,6 +24,7 @@ jobs:
             cv.tex
             cover_letter.tex
           latexmk_use_xelatex: true
+          extra_fonts: ./Manrope/*.ttf
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
