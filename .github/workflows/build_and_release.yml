@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Build and Release Documents
+
+on:
+  push:
+    tags:
+      - 'v*'
+  # workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile CV (XeLaTeX)
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            cv.tex
+            cover_letter.tex
+          latexmk_use_xelatex: true
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv and cover letter pdf
+          path: |
+            cv.pdf
+            cover_letter.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Download CV and Cover letter artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv and cover letter pdf
+          path: dist
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          make_latest: true
+          files: |
+            dist/cv.pdf
+            dist/cover_letter.pdf
+          fail_on_unmatched_files: true
